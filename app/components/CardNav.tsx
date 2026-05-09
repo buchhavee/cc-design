@@ -139,10 +139,13 @@ export function CardNav() {
         >
           <div className="overflow-hidden min-h-0">
             <div className="flex flex-col gap-2 p-2 md:flex-row md:gap-3">
-              {CARDS.map((card) => (
+              {CARDS.map((card, idx) => (
                 <div
                   key={card.label}
-                  className={`flex flex-1 flex-col rounded-xl px-5 py-4 ${card.bgClass} ${card.textClass} min-h-35`}
+                  className={`flex flex-1 flex-col rounded-xl px-5 py-4 ${card.bgClass} ${card.textClass} min-h-35 transition-[opacity,transform] duration-320 ease-(--ease-out-quart) ${
+                    open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+                  }`}
+                  style={{ transitionDelay: open ? `${idx * 60}ms` : "0ms" }}
                 >
                   <div className="font-display text-[22px] font-normal tracking-[-0.01em]">
                     {card.label}
