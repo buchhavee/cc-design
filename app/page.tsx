@@ -1,4 +1,4 @@
-import { Nav } from "./components/Nav";
+import { CardNav } from "./components/CardNav";
 import { Hero } from "./components/Hero";
 import { Statement } from "./components/Statement";
 import { Projects } from "./components/Projects";
@@ -18,7 +18,7 @@ export default function Home() {
       >
         Skip to content
       </a>
-      <Nav />
+      <CardNav />
       <main id="main">
         <Hero />
         <Statement />
