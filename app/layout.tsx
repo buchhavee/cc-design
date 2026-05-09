@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import localFont from "next/font/local";
+import { SmoothScroll } from "./components/SmoothScroll";
 import "./globals.css";
 
 const openSauce = localFont({
@@ -38,7 +39,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${openSauce.variable} ${jetbrains.variable}`}>
-      <body>{children}</body>
+      <body>
+        <SmoothScroll />
+        {children}
+      </body>
     </html>
   );
 }
