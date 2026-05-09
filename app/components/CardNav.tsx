@@ -159,7 +159,7 @@ export function CardNav() {
               {CARDS.map((card, idx) => (
                 <div
                   key={card.label}
-                  className={`flex flex-1 flex-col rounded-xl px-5 py-4 ${card.bgClass} ${card.textClass} min-h-35 transition-[opacity,transform] duration-220 ease-(--ease-out-quart) ${
+                  className={`flex flex-1 flex-col rounded-xl px-5 py-4 ${card.bgClass} ${card.textClass} min-h-35 transition-[opacity,translate] duration-220 ease-(--ease-out-quart) ${
                     open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
                   }`}
                   style={{ transitionDelay: open ? `${idx * 50}ms` : "0ms" }}
@@ -176,7 +176,7 @@ export function CardNav() {
                         aria-label={link.ariaLabel}
                         tabIndex={open ? 0 : -1}
                         onClick={() => setOpen(false)}
-                        className={`inline-flex items-center gap-2 font-body text-[15px] no-underline transition-[opacity,transform] duration-220 ease-(--ease-out-quart) ${
+                        className={`inline-flex items-center gap-2 font-body text-[15px] no-underline transition-[opacity,translate] duration-220 ease-(--ease-out-quart) ${
                           open ? "opacity-90 translate-y-0 hover:opacity-100" : "opacity-0 translate-y-2"
                         }`}
                         style={{ transitionDelay: open ? `${idx * 50 + 120 + linkIdx * 30}ms` : "0ms" }}
