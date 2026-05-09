@@ -151,7 +151,7 @@ export function CardNav() {
         </div>
         <div
           id="cardnav-cards"
-          aria-hidden={!open}
+          aria-hidden={open ? undefined : true}
           className={`grid transition-[grid-template-rows] duration-400 ease-(--ease-out-quart) ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
         >
           <div className="overflow-hidden min-h-0">
