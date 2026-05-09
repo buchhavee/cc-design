@@ -152,17 +152,17 @@ export function CardNav() {
         <div
           id="cardnav-cards"
           aria-hidden={open ? undefined : true}
-          className={`grid transition-[grid-template-rows] duration-400 ease-(--ease-out-quart) ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
+          className={`grid transition-[grid-template-rows] duration-260 ease-(--ease-out-quart) ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
         >
           <div className="overflow-hidden min-h-0">
             <div className="flex flex-col gap-2 p-2 md:flex-row md:gap-3">
               {CARDS.map((card, idx) => (
                 <div
                   key={card.label}
-                  className={`flex flex-1 flex-col rounded-xl px-5 py-4 ${card.bgClass} ${card.textClass} min-h-35 transition-[opacity,transform] duration-320 ease-(--ease-out-quart) ${
+                  className={`flex flex-1 flex-col rounded-xl px-5 py-4 ${card.bgClass} ${card.textClass} min-h-35 transition-[opacity,transform] duration-220 ease-(--ease-out-quart) ${
                     open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
                   }`}
-                  style={{ transitionDelay: open ? `${idx * 60}ms` : "0ms" }}
+                  style={{ transitionDelay: open ? `${idx * 50}ms` : "0ms" }}
                 >
                   <div className="font-display text-[22px] font-normal tracking-[-0.01em]">
                     {card.label}
@@ -176,7 +176,10 @@ export function CardNav() {
                         aria-label={link.ariaLabel}
                         tabIndex={open ? 0 : -1}
                         onClick={() => setOpen(false)}
-                        className="inline-flex items-center gap-2 font-body text-[15px] no-underline opacity-90 hover:opacity-100 transition-opacity duration-240"
+                        className={`inline-flex items-center gap-2 font-body text-[15px] no-underline transition-[opacity,transform] duration-220 ease-(--ease-out-quart) ${
+                          open ? "opacity-90 translate-y-0 hover:opacity-100" : "opacity-0 translate-y-2"
+                        }`}
+                        style={{ transitionDelay: open ? `${idx * 50 + 120 + linkIdx * 30}ms` : "0ms" }}
                       >
                         <ArrowIcon />
                         <span>{link.label}</span>
