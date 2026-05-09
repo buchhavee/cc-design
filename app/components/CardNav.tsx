@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CCLogo } from "./CCLogo";
 
 type CardLink = { label: string; href: string; ariaLabel: string };
@@ -70,6 +70,22 @@ export function CardNav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
+  const burgerRef = useRef<HTMLButtonElement>(null);
+  const firstLinkRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    firstLinkRef.current?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+        burgerRef.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -96,6 +112,7 @@ export function CardNav() {
       >
         <div className="relative flex h-15 items-center px-3 sm:px-4">
           <button
+            ref={burgerRef}
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
@@ -151,9 +168,10 @@ export function CardNav() {
                     {card.label}
                   </div>
                   <div className="mt-auto flex flex-col gap-1.5 pt-4">
-                    {card.links.map((link) => (
+                    {card.links.map((link, linkIdx) => (
                       <a
                         key={link.label}
+                        ref={idx === 0 && linkIdx === 0 ? firstLinkRef : undefined}
                         href={link.href}
                         aria-label={link.ariaLabel}
                         tabIndex={open ? 0 : -1}
