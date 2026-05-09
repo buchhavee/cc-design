@@ -5,6 +5,7 @@ import { CCLogo } from "./CCLogo";
 
 export function CardNav() {
   const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -33,11 +34,15 @@ export function CardNav() {
         <div className="relative flex h-15 items-center px-3 sm:px-4">
           <button
             type="button"
-            aria-label="Open menu"
-            className="inline-flex h-9 w-9 flex-col items-center justify-center gap-1.5 cursor-pointer bg-transparent border-0 p-0 text-current"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls="cardnav-cards"
+            onClick={() => setOpen((v) => !v)}
+            data-open={open || undefined}
+            className="group inline-flex h-9 w-9 flex-col items-center justify-center gap-1.5 cursor-pointer bg-transparent border-0 p-0 text-current"
           >
-            <span className="block h-px w-6 bg-current transition-transform duration-240 ease-(--ease-out-quart)" />
-            <span className="block h-px w-6 bg-current transition-transform duration-240 ease-(--ease-out-quart)" />
+            <span className="block h-px w-6 bg-current transition-transform duration-240 ease-(--ease-out-quart) origin-center group-data-open:translate-y-0.75 group-data-open:rotate-45" />
+            <span className="block h-px w-6 bg-current transition-transform duration-240 ease-(--ease-out-quart) origin-center group-data-open:-translate-y-0.75 group-data-open:-rotate-45" />
           </button>
 
           <button
@@ -63,6 +68,17 @@ export function CardNav() {
             <span>Contact</span>
             <span aria-hidden="true" className="inline-block w-1.5 h-1.5 rounded-full bg-accent-bright" />
           </a>
+        </div>
+        <div
+          id="cardnav-cards"
+          aria-hidden={!open}
+          className={`grid transition-[grid-template-rows] duration-400 ease-(--ease-out-quart) ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
+        >
+          <div className="overflow-hidden min-h-0">
+            <div className="flex flex-col gap-2 p-2 md:flex-row md:gap-3">
+              {/* Cards will be added in Task 4 */}
+            </div>
+          </div>
         </div>
       </nav>
     </div>
