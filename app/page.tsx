@@ -1,5 +1,6 @@
 import { CardNav } from "./components/CardNav";
 import { Hero } from "./components/Hero";
+import { TrustBar } from "./components/TrustBar";
 import { Statement } from "./components/Statement";
 import { Projects } from "./components/Projects";
 import { Services } from "./components/Services";
@@ -21,6 +22,7 @@ export default function Home() {
       <CardNav />
       <main id="main">
         <Hero />
+        <TrustBar />
         <Statement />
         <Projects />
         <Services />

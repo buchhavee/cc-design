@@ -41,7 +41,7 @@ export function Hero() {
         <div className="md:col-span-7 lg:col-span-7 order-2 md:order-1">
           <div className="inline-flex items-center font-body text-xs font-medium tracking-[0.14em] uppercase text-fg-inverse/75 mb-4 md:mb-10 transition-opacity duration-600 delay-200" style={{ opacity: visible ? 1 : 0 }}>
             <span className="text-accent">●</span>
-            &nbsp;&nbsp;Available for select 2026 commissions
+            &nbsp;&nbsp;Specialists in marine engineering & harbour construction
           </div>
           <h1 className="font-display font-light text-[clamp(1.85rem,7vw,6.8rem)] leading-[1.05] md:leading-[1.02] tracking-tight m-0 text-fg-inverse text-balance">
             {[0, 1].map((i) => (
@@ -54,7 +54,7 @@ export function Hero() {
                     transitionDelay: `${400 + i * 120}ms`,
                   }}
                 >
-                  {i === 0 ? <strong style={{ fontWeight: "inherit" }}>Maritime design shaped by</strong> : <em className="italic font-display">experience.</em>}
+                  {i === 0 ? <strong style={{ fontWeight: "inherit" }}>Marine engineering shaped by</strong> : <em className="italic font-display">integrity.</em>}
                 </span>
               </span>
             ))}
@@ -66,7 +66,7 @@ export function Hero() {
               transform: visible ? "translateY(0)" : "translateY(20px)",
             }}
           >
-            <p className="m-0 font-body text-sm md:text-lg leading-[1.6] md:leading-[1.65] font-normal text-fg-inverse/80 max-w-[460px]">From concept to construction, we create durable, functional solutions for the maritime industry, developed through years of hands-on expertise.</p>
+            <p className="m-0 font-body text-sm md:text-lg leading-[1.6] md:leading-[1.65] font-normal text-fg-inverse/80 max-w-[460px]">Specialised totalentreprenør for harbour construction and long-lifecycle infrastructure. We deliver engineering depth, precise calculations, and methodical execution.</p>
           </div>
         </div>
 
