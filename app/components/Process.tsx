@@ -5,23 +5,28 @@ import { useReveal } from "./hooks/useReveal";
 const STEPS = [
   {
     num: "01",
-    title: "Discovery",
-    body: "Listen, understand, define the brief. We commit to a deep first phase before any drawing.",
+    title: "Survey & Analysis",
+    body: "Bathymetric surveys and seabed analysis. We establish the technical foundation before engineering begins.",
   },
   {
     num: "02",
-    title: "Concept",
-    body: "Develop spatial and material strategies. Studies in scale, light, materiality, and rhythm.",
+    title: "Engineering",
+    body: "Precise ingeniørberegninger for structural loads, currents, and ice pressure. Methodical design for longevity.",
   },
   {
     num: "03",
-    title: "Execution",
-    body: "Precision-led delivery with direct principal oversight. Documentation, tendering, and site.",
+    title: "Permitting",
+    body: "Handling complex municipal and environmental approvals. We navigate the regulatory landscape as totalentreprenør.",
   },
   {
     num: "04",
-    title: "Handover",
-    body: "Complete documentation, lasting relationship. We remain involved past completion.",
+    title: "Execution",
+    body: "Specialised marine construction with direct oversight. Precision-led delivery in challenging environments.",
+  },
+  {
+    num: "05",
+    title: "Lifecycle",
+    body: "Handover with comprehensive documentation. We ensure low maintenance and long-term structural health.",
   },
 ];
 
@@ -32,21 +37,21 @@ export function Process() {
       <div className="flex items-end justify-between mb-20 flex-wrap gap-6">
         <div>
           <div className="inline-flex items-center font-body text-xs font-medium tracking-[0.14em] uppercase text-fg-subtle">
-            How We Work · Four Movements
+            Projekteringsprocessen · Five Stages
           </div>
           <h2 className="font-display font-light text-[clamp(2.5rem,5vw,4rem)] leading-[1.05] tracking-[-0.02em] mt-5 mb-0 text-fg">
-            A method,
+            A methodical approach,
             <br />
-            practiced openly.
+            to marine engineering.
           </h2>
         </div>
         <p className="font-body text-base leading-[1.7] max-w-90 m-0 text-fg-muted">
-          Every commission moves through the same four movements. The pace
-          varies; the discipline does not.
+          Every project follows a rigorous five-stage process. From seabed
+          analysis to long-term lifecycle management, we own the complexity.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 max-[720px]:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 max-[720px]:grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
         {STEPS.map((s, i) => (
           <div
             key={s.num}

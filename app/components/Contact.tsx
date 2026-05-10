@@ -34,20 +34,51 @@ export function Contact() {
             </h2>
             <p className="font-body text-lg leading-[1.65] text-fg-muted max-w-130 mt-10 mb-14">
               We respond to every qualified inquiry within two working days.
-              Brief us by email, by phone, or with a short note on the form.
+              Brief us by email, or provide project details using the structured form.
             </p>
-            <a
-              href="mailto:mk@ccdesign.dk"
-              className="group relative inline-flex items-center gap-3.5 px-7 py-[18px] bg-fg text-fg-inverse border border-fg overflow-hidden font-body text-[13px] font-medium tracking-widest uppercase no-underline cursor-pointer transition-[border-color,transform] duration-240 hover:border-accent active:scale-[0.97] before:content-[''] before:absolute before:inset-0 before:bg-accent before:-translate-x-full before:transition-transform before:duration-380 before:ease-(--ease-out-expo) hover:before:translate-x-0"
-            >
-              <span className="relative z-1">Start a Conversation</span>
-              <span
-                aria-hidden="true"
-                className="relative z-1 inline-block transition-transform duration-280 ease-(--ease-out-quart) group-hover:translate-x-1.5"
-              >
-                →
-              </span>
-            </a>
+
+            <form className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14 max-w-160">
+              <div className="flex flex-col gap-2">
+                <label className="font-mono text-[10px] uppercase tracking-widest text-fg-subtle">Name</label>
+                <input type="text" className="bg-transparent border-b border-fg/15 py-2 px-0 font-body text-sm focus:outline-none focus:border-accent transition-colors" placeholder="Full name" />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="font-mono text-[10px] uppercase tracking-widest text-fg-subtle">Email</label>
+                <input type="email" className="bg-transparent border-b border-fg/15 py-2 px-0 font-body text-sm focus:outline-none focus:border-accent transition-colors" placeholder="email@company.com" />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="font-mono text-[10px] uppercase tracking-widest text-fg-subtle">Project Type</label>
+                <select className="bg-transparent border-b border-fg/15 py-2 px-0 font-body text-sm focus:outline-none focus:border-accent transition-colors appearance-none">
+                  <option>Harbour Construction</option>
+                  <option>Marine Engineering</option>
+                  <option>Repair & Upgrade</option>
+                  <option>Klimatilpasning</option>
+                </select>
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="font-mono text-[10px] uppercase tracking-widest text-fg-subtle">Scale / Location</label>
+                <input type="text" className="bg-transparent border-b border-fg/15 py-2 px-0 font-body text-sm focus:outline-none focus:border-accent transition-colors" placeholder="e.g. 500m² / Aarhus" />
+              </div>
+              <div className="flex flex-col gap-2 md:col-span-2">
+                <label className="font-mono text-[10px] uppercase tracking-widest text-fg-subtle">Brief</label>
+                <textarea className="bg-transparent border-b border-fg/15 py-2 px-0 font-body text-sm focus:outline-none focus:border-accent transition-colors min-h-24 resize-none" placeholder="Initial project scope..." />
+              </div>
+              <div className="md:col-span-2 mt-4">
+                <button
+                  type="submit"
+                  onClick={(e) => e.preventDefault()}
+                  className="group relative inline-flex items-center gap-3.5 px-7 py-[18px] bg-fg text-fg-inverse border border-fg overflow-hidden font-body text-[13px] font-medium tracking-widest uppercase no-underline cursor-pointer transition-[border-color,transform] duration-240 hover:border-accent active:scale-[0.97] before:content-[''] before:absolute before:inset-0 before:bg-accent before:-translate-x-full before:transition-transform before:duration-380 before:ease-(--ease-out-expo) hover:before:translate-x-0"
+                >
+                  <span className="relative z-1">Submit Inquiry</span>
+                  <span
+                    aria-hidden="true"
+                    className="relative z-1 inline-block transition-transform duration-280 ease-(--ease-out-quart) group-hover:translate-x-1.5"
+                  >
+                    →
+                  </span>
+                </button>
+              </div>
+            </form>
           </div>
 
           <aside

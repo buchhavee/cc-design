@@ -4,16 +4,16 @@ import { ReactNode } from "react";
 import { useReveal } from "./hooks/useReveal";
 
 const LINES: ReactNode[] = [
-  "CC Design A/S works at the boundary",
-  "between architecture, craft, and",
+  "CC Design A/S operates as a",
+  "dedicated totalentreprenør for",
   <span key="t" className="text-fg-subtle">
-    technology — delivering built environments
+    marine infrastructure — where rigorous
   </span>,
   <span key="d" className="text-fg-subtle">
-    and designed spaces that communicate
+    ingeniørberegninger and seniority ensure
   </span>,
   <em key="e" className="italic">
-    precision, permanence, and care.
+    structural integrity and longevity.
   </em>,
 ];
 
@@ -28,7 +28,7 @@ export function Statement() {
         className="inline-flex items-center font-body text-xs font-medium tracking-[0.14em] uppercase text-fg-subtle transition-opacity duration-600"
         style={{ opacity: visible ? 1 : 0 }}
       >
-        00 — Founded · Kerteminde · 2014
+        00 — Marine Engineering · Kerteminde · 2014
       </div>
       <p className="font-display font-light text-[clamp(1.75rem,3.2vw,2.75rem)] leading-[1.25] tracking-[-0.015em] text-fg mt-8 mb-0 text-pretty">
         {LINES.map((line, i) => (

@@ -6,28 +6,28 @@ import { useReveal } from "./hooks/useReveal";
 const SERVICES = [
   {
     num: "01",
-    title: "Architectural Design",
-    desc: "Master planning, schematic and detailed design for residential, cultural, and mixed-use commissions across Scandinavia.",
+    title: "Marine Engineering",
+    desc: "Detailed ingeniørberegninger, structural analysis, and bathymetric mapping. We provide the technical depth required for complex maritime environments.",
   },
   {
     num: "02",
-    title: "Interior & Spatial Design",
-    desc: "Material specification, furniture, lighting, and atmosphere — interiors developed in lockstep with the architecture.",
+    title: "Harbour Construction",
+    desc: "Specialised construction of quays, piers, and breakwaters. We operate as totalentreprenør, managing every phase from seabed to surface.",
   },
   {
     num: "03",
-    title: "Premium Construction Consultancy",
-    desc: "Direct, principal-led oversight from tender through completion. Documentation precision; site presence; trade coordination.",
+    title: "Repair & Upgrade",
+    desc: "Repair-as-upgrade methodology. We extend the life of existing infrastructure through technical intervention and material science, reducing total cost of ownership.",
   },
   {
     num: "04",
-    title: "Brand Environment Strategy",
-    desc: "Spatial expression of brand for hospitality, retail, and cultural institutions. Where identity meets architecture.",
+    title: "Klimatilpasning",
+    desc: "Technical engineering for coastal protection. We design infrastructure that is climate-resilient by default, focusing on structural permanence and surge protection.",
   },
   {
     num: "05",
-    title: "Renovation & Heritage",
-    desc: "Sensitive intervention on listed and historic structures. Conservation-first methodology with contemporary insertion.",
+    title: "Lifecycle Consultancy",
+    desc: "Long-term maintenance planning and structural health monitoring. Minimising operational costs through evidence-based lifecycle management.",
   },
 ];
 
@@ -44,17 +44,17 @@ export function Services() {
       <div className="grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-12 lg:gap-20 items-start">
         <div className="lg:sticky lg:top-30">
           <div className="inline-flex items-center font-body text-xs font-medium tracking-[0.14em] uppercase text-fg-inverse/55">
-            Our Scope · Five Disciplines
+            Our Expertise · Marine Infrastructure
           </div>
           <h2 className="font-display font-light text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.05] tracking-[-0.02em] mt-5 mb-8 text-fg-inverse">
-            Five disciplines.
+            Five core disciplines.
             <br />
-            <em className="italic">One</em> studio.
+            <em className="italic">One</em> engineering partner.
           </h2>
           <p className="font-body text-base leading-[1.7] text-fg-inverse/70 max-w-[440px] m-0">
-            We work across the lifecycle of a built environment — from first
-            sketch to completed handover — with the same hand throughout. Click
-            a discipline to read more.
+            We operate across the entire lifecycle of marine infrastructure —
+            delivering solutions where durability, precision, and economic efficiency
+            are paramount.
           </p>
         </div>
 

@@ -6,35 +6,39 @@ import { useReveal } from "./hooks/useReveal";
 const PROJECTS = [
   {
     idx: "01",
-    title: "Hav House",
-    category: "Residential",
-    location: "Kerteminde, DK",
+    title: "Islands Brygge Havnebad",
+    category: "Structural Repair",
+    location: "Copenhagen, DK",
     year: "2025",
     span: 7,
+    scale: "840m² structural renovation",
   },
   {
     idx: "02",
-    title: "Aarhus Harbor Bath",
-    category: "Cultural",
-    location: "Aarhus, DK",
+    title: "Nordhavn Quay Wall",
+    category: "Harbour Construction",
+    location: "Copenhagen, DK",
     year: "2024",
     span: 5,
+    scale: "120m sheet pile construction",
   },
   {
     idx: "03",
-    title: "Floating Clubhouse",
-    category: "Mixed-Use",
-    location: "Copenhagen, DK",
+    title: "Reykjavík Pier Upgrade",
+    category: "Marine Engineering",
+    location: "Reykjavík, IS",
     year: "2024",
     span: 5,
+    scale: "Ice-pressure load calculation",
   },
   {
     idx: "04",
-    title: "Floating Church",
-    category: "Hospitality",
-    location: "Copenhagen, DK",
+    title: "Aarhus East Infrastructure",
+    category: "Coastal Protection",
+    location: "Aarhus, DK",
     year: "2023",
     span: 7,
+    scale: "Klimatilpasning & Surge protection",
   },
 ];
 
@@ -46,11 +50,11 @@ export function Projects() {
     <section ref={ref} id="work" className="px-(--gutter) py-[clamp(56px,7vh,96px)]">
       <div className="flex items-end justify-between mb-12 flex-wrap gap-8">
         <div>
-          <div className={eyebrow}>Selected Projects · 2023–2026</div>
+          <div className={eyebrow}>Selected Projects · International References</div>
           <h2 className="font-display font-light text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.05] tracking-[-0.02em] mt-5 mb-0 text-fg">
-            The Work,
+            Structural references,
             <br />
-            <em className="italic">shown</em> not explained.
+            <em className="italic">built</em> for longevity.
           </h2>
         </div>
         <a href="#all" className="group inline-flex items-center gap-3 pb-1.5 border-b border-fg text-fg font-body text-[13px] font-medium tracking-widest uppercase no-underline transition-colors duration-240 hover:text-accent hover:border-accent">
@@ -95,6 +99,7 @@ export function Projects() {
                   {p.idx} · {p.category}
                 </div>
                 <h3 className="font-display font-normal text-[clamp(1.4rem,2vw,1.85rem)] mt-2 mb-0 text-fg tracking-[-0.01em] transition-colors duration-500 ease-(--ease-out-quart) group-hover:text-accent">{p.title}</h3>
+                <div className="font-mono text-[10px] uppercase tracking-wider text-fg-subtle mt-1.5">{p.scale}</div>
               </div>
               <div className="font-mono text-xs text-fg-subtle whitespace-nowrap transition-colors duration-500 ease-(--ease-out-quart) group-hover:text-fg-muted">
                 {p.location} · {p.year}
